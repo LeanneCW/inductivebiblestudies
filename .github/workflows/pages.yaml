@@ -29,7 +29,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
-      - run: npx wp-pwa build inductivebiblestudies
+      - run: npm install
+
+      - run: npm build
       
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
